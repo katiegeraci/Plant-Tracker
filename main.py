@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 
 hide_debug_information()
-set_website_title("Your Drafter Website")
+set_website_title("Plant Tracker")
 set_website_framed(False)
 
 
@@ -16,8 +16,8 @@ class State:
 
 @route
 def index(state: State) -> Page:
-    return Page(state, ["Hello World!"])
+    return Page(state, ["Welcome to the Plant Tracker!"])
 
-assert_equal(index(State()), Page(State(), ["Hello World!"]))
+assert_equal(index(State()), Page(State(), ["Welcome to the Plant Tracker!"]))
 
 start_server(State())
